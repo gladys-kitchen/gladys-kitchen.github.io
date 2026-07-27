@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gladys Kitchen — Chapati, Chips Kuku & Fried Chicken in Nanyuki</title>
+<meta name="description" content="Gladys Kitchen — Nanyuki's favorite spot for chapati, chips kuku, full fried chicken and drinks. Great taste, honest prices. Order on WhatsApp today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FFF7E8;
+    --cream-2:#FFEFD1;
+    --paper:#FFFDF8;
+    --ink:#4A2410;
+    --ink-soft:#7A4A2C;
+    --red:#D6402A;
+    --red-dark:#A82C18;
+    --orange:#F2793B;
+    --gold:#F4B942;
+    --maroon:#5C1F14;
+    --maroon-2:#431509;
+    --green-check:#4C7A3D;
+    --shadow: 0 10px 30px rgba(92,31,20,0.14);
+    --shadow-soft: 0 6px 16px rgba(92,31,20,0.10);
+    --radius-lg: 26px;
+    --radius-md: 18px;
+    --radius-sm: 12px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Mulish', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{
+    font-family:'Baloo 2', sans-serif;
+    margin:0;
+    color:var(--maroon);
+    line-height:1.15;
+  }
+  p{margin:0;}
+  a{text-decoration:none;color:inherit;}
+  img{max-width:100%;display:block;}
+  ul{margin:0;padding:0;list-style:none;}
+  button{font-family:inherit;cursor:pointer;border:none;}
+  section{position:relative;}
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    font-size:0.78rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--red-dark);
+    background:#FFE3D2;
+    padding:7px 16px;
+    border-radius:999px;
+  }
+  .section-head{
+    text-align:center;
+    max-width:640px;
+    margin:0 auto 46px;
+  }
+  .section-head h2{
+    font-size:clamp(1.9rem, 4vw, 2.6rem);
+    margin:12px 0 12px;
+  }
+  .section-head p{
+    color:var(--ink-soft);
+    font-size:1.05rem;
+  }
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    font-size:1rem;
+    padding:15px 28px;
+    border-radius:999px;
+    transition:transform .22s ease, box-shadow .22s ease, background .22s ease;
+    white-space:nowrap;
+  }
+  .btn:active{transform:translateY(1px) scale(.98);}
+  .btn-call{
+    background:var(--maroon);
+    color:#fff;
+    box-shadow:0 8px 18px rgba(92,31,20,0.3);
+  }
+  .btn-call:hover{background:var(--maroon-2); transform:translateY(-3px); box-shadow:0 12px 22px rgba(92,31,20,0.35);}
+  .btn-whatsapp{
+    background:#25D366;
+    color:#0b3d1f;
+    box-shadow:0 8px 18px rgba(37,211,102,0.35);
+  }
+  .btn-whatsapp:hover{background:#1fbd59; transform:translateY(-3px); box-shadow:0 12px 24px rgba(37,211,102,0.4);}
+  .btn-outline{
+    background:transparent;
+    border:2px solid var(--maroon);
+    color:var(--maroon);
+  }
+  .btn-outline:hover{background:var(--maroon); color:#fff; transform:translateY(-3px);}
+  .btn-small{
+    padding:11px 20px;
+    font-size:0.9rem;
+    width:100%;
+  }
+
+  /* NAV */
+  .nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(255,247,232,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(92,31,20,0.08);
+  }
+  .nav-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 24px;
+    max-width:1180px;
+    margin:0 auto;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .brand .mascot-wrap{width:46px;height:46px;flex-shrink:0;}
+  .brand-name{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:800;
+    font-size:1.28rem;
+    color:var(--maroon);
+    letter-spacing:-0.01em;
+  }
+  .brand-name span{color:var(--red);}
+  .nav-links{
+    display:flex;
+    align-items:center;
+    gap:34px;
+  }
+  .nav-links a{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:600;
+    font-size:1rem;
+    color:var(--ink);
+    position:relative;
+    padding:4px 0;
+  }
+  .nav-links a::after{
+    content:'';
+    position:absolute;
+    left:0;bottom:-3px;
+    height:3px;width:0%;
+    background:var(--red);
+    border-radius:3px;
+    transition:width .25s ease;
+  }
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{display:flex;align-items:center;gap:14px;}
+  .nav-cta .btn{padding:11px 20px;font-size:0.92rem;}
+  .burger{
+    display:none;
+    width:44px;height:44px;
+    border-radius:12px;
+    background:var(--cream-2);
+    align-items:center;justify-content:center;
+    flex-direction:column;
+    gap:5px;
+  }
+  .burger span{width:22px;height:3px;background:var(--maroon);border-radius:3px;transition:all .25s ease;}
+  .burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+  .burger.open span:nth-child(2){opacity:0;}
+  .burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+
+  /* HERO */
+  .hero{
+    padding:64px 0 90px;
+    background:
+      radial-gradient(ellipse at 85% 15%, rgba(244,185,66,0.35), transparent 55%),
+      radial-gradient(ellipse at 10% 90%, rgba(214,64,42,0.14), transparent 50%);
+    overflow:hidden;
+  }
+  .hero-inner{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    align-items:center;
+    gap:40px;
+  }
+  .hero-copy .eyebrow{margin-bottom:18px;}
+  .hero-copy h1{
+    font-size:clamp(2.1rem, 4.4vw, 3.3rem);
+    margin-bottom:20px;
+  }
+  .hero-copy h1 em{
+    font-style:normal;
+    color:var(--red);
+    position:relative;
+    display:inline-block;
+  }
+  .hero-copy p{
+    font-size:1.12rem;
+    color:var(--ink-soft);
+    max-width:540px;
+    margin-bottom:30px;
+  }
+  .hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:26px;}
+  .hero-note{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:'Baloo 2';
+    font-weight:600;
+    color:var(--ink-soft);
+    font-size:0.95rem;
+  }
+  .hero-note .dot{width:9px;height:9px;border-radius:50%;background:var(--green-check);display:inline-block;}
+
+  .hero-visual{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .hero-plate{
+    position:relative;
+    width:100%;
+    max-width:440px;
+    aspect-ratio:1/1;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .hero-mascot{
+    width:100%;
+    animation: float 4.5s ease-in-out infinite;
+    filter:drop-shadow(0 18px 24px rgba(92,31,20,0.3));
+  }
+  @keyframes float{
+    0%,100%{transform:translateY(0px) rotate(-2deg);}
+    50%{transform:translateY(-16px) rotate(2deg);}
+  }
+  .crumb{
+    position:absolute;
+    border-radius:50%;
+    background:var(--gold);
+    opacity:.85;
+  }
+  .crumb.c1{width:20px;height:20px;top:8%;left:6%;background:var(--red);}
+  .crumb.c2{width:14px;height:14px;bottom:12%;right:2%;}
+  .crumb.c3{width:10px;height:10px;top:44%;right:-2%;background:var(--green-check);opacity:.5;}
+
+  /* SIGNATURE divider */
+  .divider{
+    display:block;
+    width:100%;
+    height:60px;
+    margin-top:-2px;
+  }
+
+  /* ABOUT */
+  .about{
+    background:var(--paper);
+    padding:90px 0;
+  }
+  .about-inner{
+    display:grid;
+    grid-template-columns:0.8fr 1.2fr;
+    gap:56px;
+    align-items:center;
+  }
+  .about-mascot{
+    background:linear-gradient(155deg, var(--cream-2), #FFE0BC);
+    border-radius:var(--radius-lg);
+    padding:36px;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:var(--shadow-soft);
+  }
+  .about-mascot img{width:100%;max-width:230px;}
+  .about-text .eyebrow{margin-bottom:16px;}
+  .about-text h2{font-size:clamp(1.8rem,3.6vw,2.3rem);margin-bottom:18px;}
+  .about-text p{color:var(--ink-soft);font-size:1.05rem;margin-bottom:16px;}
+  .about-signature{
+    margin-top:22px;
+    font-family:'Baloo 2';
+    font-weight:700;
+    color:var(--maroon);
+    font-size:1.05rem;
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .sig-line{width:52px;height:3px;background:var(--red);border-radius:3px;}
+
+  /* MENU */
+  .menu{
+    padding:90px 0;
+    background:
+      linear-gradient(180deg, var(--cream) 0%, #FFF1D6 100%);
+  }
+  .menu-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:26px;
+  }
+  .menu-card{
+    background:var(--paper);
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    box-shadow:var(--shadow-soft);
+    transition:transform .28s ease, box-shadow .28s ease;
+    display:flex;
+    flex-direction:column;
+  }
+  .menu-card:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow);
+  }
+  .menu-photo{
+    height:170px;
+    width:100%;
+    overflow:hidden;
+    position:relative;
+  }
+  .menu-photo img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;}
+  .menu-card:hover .menu-photo img{transform:scale(1.08);}
+  .menu-tag{
+    position:absolute;
+    top:12px;left:12px;
+    background:var(--red);
+    color:#fff;
+    font-family:'Baloo 2';
+    font-weight:700;
+    font-size:0.72rem;
+    padding:5px 12px;
+    border-radius:999px;
+    letter-spacing:.03em;
+  }
+  .menu-body{
+    padding:20px 20px 22px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    flex:1;
+  }
+  .menu-body h3{font-size:1.22rem;}
+  .menu-body p{color:var(--ink-soft);font-size:0.92rem;flex:1;}
+  .price-btn{
+    margin-top:6px;
+    background:var(--gold);
+    color:var(--maroon-2);
+    font-weight:800;
+  }
+  .price-btn:hover{background:var(--orange); color:#fff;}
+
+  /* WHY CHOOSE US */
+  .why{
+    padding:90px 0;
+    background:var(--maroon);
+    color:#FFF3E0;
+    position:relative;
+    overflow:hidden;
+  }
+  .why::before{
+    content:'';
+    position:absolute;
+    width:520px;height:520px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(244,185,66,0.18), transparent 70%);
+    top:-180px;right:-160px;
+  }
+  .why .section-head h2, .why .section-head p{color:#FFF3E0;}
+  .why .eyebrow{background:rgba(255,255,255,0.12);color:#FFD9A8;}
+  .why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+  }
+  .why-card{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:var(--radius-md);
+    padding:30px 22px;
+    text-align:center;
+    transition:transform .25s ease, background .25s ease;
+  }
+  .why-card:hover{transform:translateY(-6px); background:rgba(255,255,255,0.11);}
+  .why-icon{
+    width:58px;height:58px;
+    margin:0 auto 16px;
+    border-radius:16px;
+    background:linear-gradient(155deg, var(--gold), var(--orange));
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 16px rgba(0,0,0,0.25);
+  }
+  .why-card h3{
+    font-family:'Baloo 2';
+    color:#FFF7E8;
+    font-size:1.08rem;
+    margin-bottom:8px;
+  }
+  .why-card p{color:#F0D9BE;font-size:0.9rem;}
+
+  /* CONTACT */
+  .contact{
+    padding:90px 0;
+    background:var(--paper);
+  }
+  .contact-inner{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:50px;
+  }
+  .contact-info{
+    background:linear-gradient(160deg, var(--red) 0%, var(--red-dark) 100%);
+    border-radius:var(--radius-lg);
+    padding:40px 34px;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+    box-shadow:var(--shadow);
+  }
+  .contact-info h3{color:#fff;font-size:1.5rem;}
+  .contact-info p{color:#FFE3D5;font-size:0.98rem;}
+  .contact-phone{
+    font-family:'Baloo 2';
+    font-weight:800;
+    font-size:1.6rem;
+    letter-spacing:0.02em;
+  }
+  .contact-info .btn-call, .contact-info .btn-whatsapp{width:100%;}
+  .contact-info .btn-call{background:#fff;color:var(--red-dark);box-shadow:none;}
+  .contact-info .btn-call:hover{background:#FFE3D5;transform:translateY(-3px);}
+  .contact-loc{
+    display:flex;align-items:center;gap:10px;
+    font-family:'Baloo 2';font-weight:600;
+    padding-top:10px;
+    border-top:1px solid rgba(255,255,255,0.25);
+  }
+
+  .contact-form{
+    background:var(--cream-2);
+    border-radius:var(--radius-lg);
+    padding:38px 34px;
+    box-shadow:var(--shadow-soft);
+  }
+  .contact-form h3{font-size:1.4rem;margin-bottom:8px;}
+  .contact-form > p{color:var(--ink-soft);margin-bottom:24px;font-size:0.95rem;}
+  .field{margin-bottom:18px;}
+  .field label{
+    display:block;
+    font-family:'Baloo 2';
+    font-weight:700;
+    font-size:0.9rem;
+    color:var(--maroon);
+    margin-bottom:7px;
+  }
+  .field input, .field textarea{
+    width:100%;
+    padding:13px 16px;
+    border-radius:var(--radius-sm);
+    border:2px solid rgba(92,31,20,0.14);
+    background:#fff;
+    font-family:'Mulish';
+    font-size:0.98rem;
+    color:var(--ink);
+    transition:border-color .2s ease, box-shadow .2s ease;
+  }
+  .field input:focus, .field textarea:focus{
+    outline:none;
+    border-color:var(--red);
+    box-shadow:0 0 0 4px rgba(214,64,42,0.12);
+  }
+  .field textarea{resize:vertical;min-height:110px;}
+  .form-submit{
+    width:100%;
+    background:#25D366;
+    color:#0b3d1f;
+    box-shadow:0 8px 18px rgba(37,211,102,0.3);
+  }
+  .form-submit:hover{background:#1fbd59;transform:translateY(-3px);}
+  .form-note{
+    font-size:0.82rem;
+    color:var(--ink-soft);
+    margin-top:12px;
+    text-align:center;
+  }
+
+  /* FOOTER */
+  footer{
+    background:var(--maroon-2);
+    color:#F0D9BE;
+    padding:52px 0 26px;
+  }
+  .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:30px;
+    padding-bottom:30px;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .footer-brand{display:flex;align-items:center;gap:12px;}
+  .footer-brand .mascot-wrap{width:44px;height:44px;}
+  .footer-brand-name{font-family:'Baloo 2';font-weight:800;font-size:1.2rem;color:#fff;}
+  .footer-col h4{
+    font-family:'Baloo 2';
+    color:#fff;
+    font-size:1rem;
+    margin-bottom:12px;
+  }
+  .footer-col p, .footer-col a{
+    font-size:0.92rem;
+    color:#F0D9BE;
+    display:block;
+    margin-bottom:6px;
+  }
+  .footer-bottom{
+    padding-top:22px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+    font-size:0.85rem;
+    color:#C9A688;
+  }
+  .footer-tagline{
+    font-family:'Baloo 2';
+    font-weight:600;
+    color:var(--gold);
+  }
+
+  /* FLOATING WHATSAPP */
+  .float-wa{
+    position:fixed;
+    bottom:24px;
+    right:24px;
+    z-index:200;
+    width:64px;height:64px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 24px rgba(37,211,102,0.5);
+    animation: pulse 2.6s ease-in-out infinite;
+  }
+  .float-wa:hover{transform:scale(1.08);}
+  @keyframes pulse{
+    0%,100%{box-shadow:0 10px 24px rgba(37,211,102,0.5);}
+    50%{box-shadow:0 10px 30px rgba(37,211,102,0.75);}
+  }
+
+  /* Reveal animation */
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  @media (prefers-reduced-motion: reduce){
+    .hero-mascot{animation:none;}
+    .float-wa{animation:none;}
+    .reveal{transition:none; opacity:1; transform:none;}
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 980px){
+    .hero-inner{grid-template-columns:1fr; text-align:center;}
+    .hero-copy p{margin-left:auto;margin-right:auto;}
+    .hero-btns{justify-content:center;}
+    .hero-note{justify-content:center;}
+    .hero-visual{order:-1; margin-bottom:10px;}
+    .hero-plate{max-width:320px;}
+    .about-inner{grid-template-columns:1fr;}
+    .about-mascot{max-width:260px;margin:0 auto;}
+    .menu-grid{grid-template-columns:repeat(2,1fr);}
+    .why-grid{grid-template-columns:repeat(2,1fr);}
+    .contact-inner{grid-template-columns:1fr;}
+  }
+  @media (max-width: 760px){
+    .nav-links{
+      position:fixed;
+      top:74px; left:0; right:0;
+      background:var(--paper);
+      flex-direction:column;
+      align-items:flex-start;
+      gap:0;
+      padding:10px 24px 20px;
+      box-shadow:0 12px 20px rgba(92,31,20,0.1);
+      transform-origin:top;
+      transform:scaleY(0);
+      opacity:0;
+      pointer-events:none;
+      transition:transform .22s ease, opacity .22s ease;
+    }
+    .nav-links.open{transform:scaleY(1); opacity:1; pointer-events:auto;}
+    .nav-links a{padding:12px 0; width:100%; border-bottom:1px solid rgba(92,31,20,0.08);}
+    .nav-cta .btn-outline{display:none;}
+    .burger{display:flex;}
+    .brand-name{font-size:1.08rem;}
+  }
+  @media (max-width: 600px){
+    .menu-grid{grid-template-columns:1fr;}
+    .why-grid{grid-template-columns:1fr;}
+    .hero-btns{flex-direction:column; width:100%;}
+    .hero-btns .btn{width:100%;}
+    .footer-inner{flex-direction:column;}
+    .footer-bottom{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="brand">
+      <span class="mascot-wrap">
+        <img src="logo.png" alt="Gladys Kitchen logo" style="width:100%;height:100%;object-fit:contain;">
+      </span>
+      <span class="brand-name">Gladys<span> Kitchen</span></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn-outline" href="tel:0717367062">Call</a>
+      <a class="btn btn-whatsapp" target="_blank" rel="noopener"
+         href="https://wa.me/254717367062?text=Hi%20Gladys%2C%20I%27d%20like%20to%20place%20an%20order.">
+        Order on WhatsApp
+      </a>
+      <button class="burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">🔥 Nanyuki's Favourite Eatery</span>
+      <h1>Nanyuki's Favourite Chapati, Chips Kuku &amp; Fried Chicken — <em>At Prices Everyone Can Afford</em></h1>
+      <p>At Gladys Kitchen, every plate is made fresh, hot, and generous — better taste and better value than anywhere else in town. Come hungry, leave happy, and taste why Nanyuki keeps coming back.</p>
+      <div class="hero-btns">
+        <a class="btn btn-call" href="tel:0717367062">📞 Call Now</a>
+        <a class="btn btn-whatsapp" target="_blank" rel="noopener"
+           href="https://wa.me/254717367062?text=Hi%20Gladys%2C%20I%27d%20like%20to%20place%20an%20order.">
+          💬 Chat on WhatsApp
+        </a>
+      </div>
+      <div class="hero-note"><span class="dot"></span> Freshly made daily in Nanyuki, Kenya</div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-plate">
+        <img class="hero-mascot" src="logo.png" alt="Gladys Kitchen logo">
+        <span class="crumb c1"></span>
+        <span class="crumb c2"></span>
+        <span class="crumb c3"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="about">
+  <div class="wrap about-inner reveal">
+    <div class="about-mascot">
+      <img src="logo.png" alt="Gladys Kitchen logo">
+    </div>
+    <div class="about-text">
+      <span class="eyebrow">Meet the Cook</span>
+      <h2>Gladys Gatimu is the heart behind every plate</h2>
+      <p>Gladys Gatimu started Gladys Kitchen with one simple idea: everyone in Nanyuki deserves a hot, delicious meal without breaking the bank. Every chapati is rolled by hand, every piece of chicken is fried to golden perfection, and every plate of chips kuku is served with the kind of care you'd expect from family.</p>
+      <p>Customers keep coming back not just for the food, but for the warmth — Gladys knows many of her regulars by name, and treats every new face like a friend she hasn't met yet. That's the Gladys Kitchen difference: honest food, honest prices, made with real love.</p>
+      <div class="about-signature">
+        <span class="sig-line"></span>
+        Gladys Gatimu, Founder &amp; Head Cook
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENU ============ -->
+<section id="menu" class="menu">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our Menu</span>
+      <h2>Made fresh. Served hot. Priced right.</h2>
+      <p>Tap any dish to ask Gladys about today's price on WhatsApp — quick, direct, and no waiting on hold.</p>
+    </div>
+
+    <div class="menu-grid">
+      <!-- Chapati -->
+      <div class="menu-card reveal">
+        <div class="menu-photo">
+          <span class="menu-tag">Bestseller</span>
+          <img src="chapati.jpeg" alt="Soft, layered Gladys Kitchen chapati" loading="lazy">
+        </div>
+        <div class="menu-body">
+          <h3>Chapati</h3>
+          <p>Soft, buttery, and flaky — rolled and cooked fresh throughout the day. The perfect side or a snack on its own.</p>
+          <a class="btn price-btn btn-small" target="_blank" rel="noopener"
+             href="https://wa.me/254717367062?text=Hi%20Gladys%2C%20I%27d%20like%20to%20know%20the%20price%20of%20Chapati.">
+            Press Here for Prices
+          </a>
+        </div>
+      </div>
+
+      <!-- Chips Kuku -->
+      <div class="menu-card reveal">
+        <div class="menu-photo">
+          <span class="menu-tag">Fan Favourite</span>
+          <img src="chipskuku.jpeg" alt="Chips kuku - fries with fried chicken, kachumbari and coleslaw" loading="lazy">
+        </div>
+        <div class="menu-body">
+          <h3>Chips Kuku</h3>
+          <p>Crispy golden fries paired with juicy fried chicken pieces — Nanyuki's favourite combo, made generous and hot.</p>
+          <a class="btn price-btn btn-small" target="_blank" rel="noopener"
+             href="https://wa.me/254717367062?text=Hi%20Gladys%2C%20I%27d%20like%20to%20know%20the%20price%20of%20Chips%20Kuku.">
+            Press Here for Prices
+          </a>
+        </div>
+      </div>
+
+      <!-- Full Fried Chicken -->
+      <div class="menu-card reveal">
+        <div class="menu-photo">
+          <span class="menu-tag">Big Sharer</span>
+          <img src="fried_full_chicken.jpeg" alt="Full fried chicken, golden and crispy" loading="lazy">
+        </div>
+        <div class="menu-body">
+          <h3>Full Fried Chicken</h3>
+          <p>A whole chicken, fried to crispy, golden perfection with our signature seasoning. Perfect for sharing with family.</p>
+          <a class="btn price-btn btn-small" target="_blank" rel="noopener"
+             href="https://wa.me/254717367062?text=Hi%20Gladys%2C%20I%27d%20like%20to%20know%20the%20price%20of%20Full%20Fried%20Chicken.">
+            Press Here for Prices
+          </a>
+        </div>
+      </div>
+
+      <!-- Drinks -->
+      <div class="menu-card reveal">
+        <div class="menu-photo">
+          <span class="menu-tag">Ice Cold</span>
+          <img src="drinks_combined.jpg" alt="Cold Coca-Cola, Fanta and Minute Maid drinks" loading="lazy">
+        </div>
+        <div class="menu-body">
+          <h3>Drinks</h3>
+          <p>Ice-cold Coca-Cola, Fanta (all flavours), Sprite and Minute Maid — the perfect finish to your Gladys Kitchen meal.</p>
+          <a class="btn price-btn btn-small" target="_blank" rel="noopener"
+             href="https://wa.me/254717367062?text=Hi%20Gladys%2C%20I%27d%20like%20to%20know%20the%20price%20of%20Drinks.">
+            Press Here for Prices
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why Nanyuki Loves Us</span>
+      <h2>Good food shouldn't be complicated</h2>
+      <p>Here's why locals choose Gladys Kitchen every single day.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H7" stroke="#5C1F14" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Affordable Prices</h3>
+        <p>Great taste that never costs a fortune — quality food for every budget.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 3c1 3-2 4-2 7a2 2 0 0 0 4 0c1 1 2 2.5 2 4a5 5 0 1 1-10 0c0-3 2-5 3-6 1-1 2-3 3-5Z" stroke="#5C1F14" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Freshly Made Daily</h3>
+        <p>Nothing sits around — every chapati, chip, and chicken piece is cooked fresh each day.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="#5C1F14" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Fast Service</h3>
+        <p>Order on WhatsApp or call ahead — your food is ready quick, hot, and on time.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="m9 12 2 2 4-4M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4Z" stroke="#5C1F14" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Trusted by Locals</h3>
+        <p>Loved and recommended by families across Nanyuki, plate after plate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Ready to order? Let's talk.</h2>
+      <p>Call, chat on WhatsApp, or send Gladys a message below.</p>
+    </div>
+
+    <div class="contact-inner reveal">
+      <div class="contact-info">
+        <h3>Reach Gladys Directly</h3>
+        <p>Fastest way to order or ask about today's menu and prices.</p>
+        <div class="contact-phone">0717 367 062</div>
+        <a class="btn btn-call" href="tel:0717367062">📞 Call Gladys Now</a>
+        <a class="btn btn-whatsapp" target="_blank" rel="noopener"
+           href="https://wa.me/254717367062?text=Hi%20Gladys%2C%20I%27d%20like%20to%20place%20an%20order.">
+          💬 Chat on WhatsApp
+        </a>
+        <div class="contact-loc">📍 Nanyuki, Kenya</div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send a Message</h3>
+        <p>No signal for a call right now? Fill this in and we'll open WhatsApp with your message ready to send.</p>
+        <form id="contactForm">
+          <div class="field">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label for="cf-phone">Phone Number</label>
+            <input type="tel" id="cf-phone" placeholder="e.g. 07XX XXX XXX" required>
+          </div>
+          <div class="field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" placeholder="Tell Gladys what you'd like to order..." required></textarea>
+          </div>
+          <button type="submit" class="btn form-submit">💬 Send Message</button>
+          <p class="form-note">This opens WhatsApp with your details pre-filled — nothing is stored on this site.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="mascot-wrap">
+          <img src="logo.png" alt="Gladys Kitchen logo" style="width:100%;height:100%;object-fit:contain;">
+        </span>
+        <span class="footer-brand-name">Gladys Kitchen</span>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:0717367062">📞 0717 367 062</a>
+        <a href="https://wa.me/254717367062" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Location</h4>
+        <p>📍 Nanyuki, Kenya</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Owner</h4>
+        <p>Gladys Gatimu</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Gladys Kitchen. All rights reserved.</span>
+      <span class="footer-tagline">Serving Nanyuki with Love, One Plate at a Time 🍗</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp button -->
+<a class="float-wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"
+   href="https://wa.me/254717367062?text=Hi%20Gladys%2C%20I%27d%20like%20to%20place%20an%20order.">
+  <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><path d="M16 2C8.3 2 2 8.3 2 16c0 2.6.7 5.1 2 7.3L2 30l6.9-1.9c2.1 1.2 4.6 1.9 7.1 1.9 7.7 0 14-6.3 14-14S23.7 2 16 2Z" fill="#fff"/><path d="M23.6 19.4c-.4-.2-2.3-1.1-2.6-1.3-.3-.1-.6-.2-.8.2-.2.4-.9 1.3-1.1 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.7.2-.2.3-.4.4-.6.1-.3 0-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.9 5.1.8.3 1.4.5 1.9.7.8.2 1.5.2 2 .1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3Z" fill="#25D366"/></svg>
+</a>
+
+<script>
+  // Mobile menu toggle
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    burger.classList.remove('open');
+    navLinks.classList.remove('open');
+  }));
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+
+  // Footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Contact form -> WhatsApp
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('cf-name').value.trim();
+    const phone = document.getElementById('cf-phone').value.trim();
+    const message = document.getElementById('cf-message').value.trim();
+
+    const text = `Hi Gladys, my name is ${name}.%0APhone: ${phone}%0AMessage: ${message}`;
+    const encoded = encodeURIComponent(`Hi Gladys, my name is ${name}.\nPhone: ${phone}\nMessage: ${message}`);
+    const url = `https://wa.me/254717367062?text=${encoded}`;
+    window.open(url, '_blank');
+  });
+</script>
+
+</body>
+</html>
